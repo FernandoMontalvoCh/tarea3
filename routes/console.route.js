@@ -20,8 +20,8 @@ consolesRouter.use(protectSession);
 
 consolesRouter.post("/", createConsole);
 
-consolesRouter.patch("/:id", updateConsole);
+consolesRouter.patch("/:id", consoleExist, updateConsole);
 
-consolesRouter.delete("/:id", deleteConsole);
+consolesRouter.delete("/:id", consoleExist, deleteConsole);
 
 module.exports = { consolesRouter };
